@@ -34,7 +34,7 @@ build=${AUTOBUILD_BUILD_ID:=0}
 echo "1.0" > "$stage/VERSION.txt"
 
 case "$AUTOBUILD_PLATFORM" in
-    windows* | darwin64)
+    windows* | darwin64 | linux64)
 
         mkdir -p "$stage/js"
         mkdir -p "$stage/LICENSES"
@@ -44,9 +44,4 @@ case "$AUTOBUILD_PLATFORM" in
         cp "${SOURCE_DIR}/LICENSE.txt" "$stage/LICENSES/JPEG_ENCODER_BASIC_LICENSE.txt"
     ;;
 
-    "linux")
-    ;;
-
-    "linux64")
-    ;;
 esac
